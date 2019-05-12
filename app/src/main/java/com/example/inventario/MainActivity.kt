@@ -30,12 +30,37 @@ import android.widget.Toast
 import androidx.navigation.ui.NavigationUI.*
 import com.google.zxing.integration.android.IntentResult
 
+/*
+*Sara Nohemi Zavala Gutierrez
+ * Carnet: 18893
+ * Laboratorio 7
+ * Aplicaciones Mobiles
+  * */
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        val navController = this.findNavController(R.id.myNavHostFragment)
+        NavigationUI.setupActionBarWithNavController(this,navController)
+
+
+        var productos = Inventario.globalInventario
+
+        var cajasCerveza= Producto("Cajas de Cerveza", "Cajas de Cerveza")
+        var producto1 = Carta(cajasCerveza,0)
+        productos.add(producto1)
+
+        var papaplinas= Producto("Papalinas", "Papalinas")
+        var producto2 = Carta(papaplinas,8)
+        productos.add(producto2)
+
+        var gaseosas = Producto("Gaseosa", "Gaseosas")
+        var producto3 = Carta(gaseosas ,25)
+        productos.add(producto3)
+
 
 
 
@@ -73,21 +98,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_gallery -> {
 
             }
-            R.id.nav_slideshow -> {
 
-            }
-            R.id.nav_manage -> {
-
-            }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
-
-            }
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+
+  //Flechita para regresar
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = this.findNavController((R.id.myNavHostFragment))
+        return navController.navigateUp()
     }
 }

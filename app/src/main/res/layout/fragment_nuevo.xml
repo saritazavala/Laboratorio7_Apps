@@ -6,7 +6,7 @@
             android:layout_height="match_parent">
 
         <TextView
-                android:text="name"
+                android:text="Nombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/nuevoNom" android:textStyle="bold"
@@ -14,28 +14,26 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginTop="84dp" android:layout_marginStart="39dp"/>
         <TextView
-                android:text="codigo"
+                android:text="Codigo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/NuevoId" android:textSize="20sp"
-                android:fontFamily="sans-serif-black" app:layout_constraintStart_toStartOf="@+id/editText"
-                android:layout_marginTop="23dp" app:layout_constraintTop_toBottomOf="@+id/editText"/>
+                android:fontFamily="sans-serif-black" app:layout_constraintStart_toStartOf="@+id/IngresarNombre"
+                android:layout_marginTop="23dp" app:layout_constraintTop_toBottomOf="@+id/IngresarNombre"/>
         <EditText
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="42dp"
                 android:inputType="textPersonName"
-                android:text="no"
                 android:ems="10"
-                android:id="@+id/editText"
+                android:id="@+id/IngresarNombre"
                 android:textColor="@android:color/darker_gray" app:layout_constraintStart_toStartOf="@+id/nuevoNom"
                 app:layout_constraintTop_toBottomOf="@+id/nuevoNom"/>
         <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"
-                android:text="cod"
                 android:ems="10"
-                android:id="@+id/editText2"
+                android:id="@+id/IngresarCodigo"
                 android:textColor="@android:color/darker_gray" app:layout_constraintStart_toStartOf="@+id/NuevoId"
                 app:layout_constraintTop_toBottomOf="@+id/NuevoId"/>
         <Button

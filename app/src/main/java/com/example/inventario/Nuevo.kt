@@ -24,22 +24,25 @@ class Nuevo : Fragment() {
         val binding: com.example.inventario.databinding.FragmentNuevoBinding= DataBindingUtil.inflate(
             inflater, R.layout.fragment_nuevo, container, false
         )
-
-
-
-
-
-        /*
-        Al presionar add se crea una nueva instancia de una fila que se añade a la lista global
-         */
+        //Se toman los datos ingresados y se utlizan para crear un nuevo Producto
         binding.add.setOnClickListener(){ view:View->
-            val nuenom = binding.editText.text.toString()
-            val nueid = binding.editText2.text.toString()
+
             var lista = Inventario.globalInventario
-            val pro = Producto(nuenom,nueid)
-            var fi = Carta(pro,0)
-            lista.add(fi)
-            Navigation.findNavController(view).navigate(R.id.action_nuevo_to_fragmentoLista)
+            //LISTA GLOBAL
+
+            //SE PIDEN LOS DATOS DEL PRODUCTO
+            val codigo = binding.IngresarCodigo.text.toString()
+            val nombre = binding.IngresarNombre.text.toString()
+            //SE PASAN A TEXTO Y LUEGO STRING
+
+            //SE JUNTA EN UN PORDUCTO
+            val productofinal = Producto(nombre,codigo)
+            //Se agrega con la cantidad inicial 0
+            var cartita = Carta(productofinal,0)
+            //ADD
+            lista.add(cartita)
+            //Se regresa
+            Navigation.findNavController(view).navigate(R.id.action_nuevo_to_fragmentoRegistro)
         }
         return binding.root
     }

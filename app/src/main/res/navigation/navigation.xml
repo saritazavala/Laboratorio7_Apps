@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/navigation" app:startDestination="@id/fragmentoLista">
+            android:id="@+id/navigation" app:startDestination="@id/fragmentoRegistro">
 
-    <fragment android:id="@+id/fragmentoLista"
+    <fragment android:id="@+id/fragmentoRegistro"
               android:name="com.example.inventario.Lista"
-              android:label="fragmentoLista"
+              android:label="fragmentoRegistro"
               tools:layout="layout/lista_fragment"/>
     <fragment android:id="@+id/nuevo"
               android:name="com.example.inventario.Nuevo"
               android:label="nuevo"
               tools:layout="layout/nuevo_fragment">
-        <action android:id="@+id/action_nuevo_to_fragmentoLista" app:destination="@id/fragmentoLista"/>
+        <action android:id="@+id/action_nuevo_to_fragmentoRegistro" app:destination="@id/fragmentoRegistro"/>
     </fragment>
 </navigation>
