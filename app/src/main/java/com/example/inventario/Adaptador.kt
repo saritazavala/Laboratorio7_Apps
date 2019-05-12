@@ -27,8 +27,8 @@ class Adaptador(var lista: ArrayList<Carta>): RecyclerView.Adapter<Adaptador.Vie
             val cant: TextView = itemView.findViewById(R.id.cantidad)
             nombre.text = data.producto.nombre
             cant.text = data.cantidad.toString()
-            val mas: Button = itemView.findViewById(R.id.Mas)
-            val menos: Button = itemView.findViewById(R.id.Menos)
+            val mas: Button = itemView.findViewById(R.id.agregar)
+            val menos: Button = itemView.findViewById(R.id.quitar)
             /*
             Sumar al contador 1, independiente para cada cardview
              */
