@@ -80,6 +80,7 @@ class Lista : Fragment() {
 
     //QR: CODIGO QUE TRATA DE LEER EL CODIGO.
     //Esto lo saque del git que Oscar nos dio como ejemplo
+    //https://github.com/kmvignesh/QRCodeScanner/blob/master/app/src/main/java/com/example/vicky/qrcodescanner/MainActivity.kt
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if(resultCode == Activity.RESULT_OK){
             val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
@@ -108,7 +109,7 @@ class Lista : Fragment() {
 
         //Si se pregunta El tamaño de nuestros productos
         if(item.itemId.equals(R.id.actual)){
-            Toast.makeText(context, "Tiene muchos items en su inventario", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Los productos Actuales son:", Toast.LENGTH_LONG).show()
         }
 
         //NavController

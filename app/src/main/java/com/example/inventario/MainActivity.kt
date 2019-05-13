@@ -71,6 +71,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+
+
+
     }
 
     override fun onBackPressed() {
@@ -93,11 +97,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_camera -> {
-                // Handle the camera action
-            }
-            R.id.nav_gallery -> {
+                val intento: Intent = Intent(this, Hola::class.java)
+                startActivity(intento)
 
             }
+            R.id.nav_gallery -> {
+                val intento: Intent = Intent(this, Hola::class.java)
+                startActivity(intento)
+
+            }
+
 
         }
 
